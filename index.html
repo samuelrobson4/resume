@@ -4,256 +4,299 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel Robson - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        color: #2d3436;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #ecf0f1;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
-    header {
-        background-color: #0984e3;
-        color: #fff;
-        padding: 30px;
-        text-align: center;
-        border-radius: 10px 10px 0 0;
-        margin-bottom: 30px;
-    }
-    h1, h2, h3 {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-    }
-    h1 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
-    }
-    .contact-info p {
-        margin: 5px 0;
-    }
-    .contact-info a {
-        color: #dfe6e9;
-    }
-    .contact-info a:hover {
-        color: #74b9ff;
-    }
-    .section {
-        background-color: #fff;
-        margin-bottom: 20px;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    h2 {
-        color: #2d3436;
-        border-bottom: 2px solid #0984e3;
-        padding-bottom: 10px;
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 1.8em;
-    }
-    .job, .education-item {
-        margin-bottom: 20px;
-    }
-    .job-title, .edu-title {
-        font-weight: bold;
-        font-size: 1.2em;
-        color: #0984e3;
-        margin-bottom: 5px;
-    }
-    .job-date, .edu-date {
-        font-style: italic;
-        color: #636e72;
-        margin-bottom: 10px;
-    }
-    ul {
-        padding-left: 20px;
-        margin-top: 5px;
-        margin-bottom: 10px;
-    }
-    li {
-        margin-bottom: 10px;
-    }
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .skill {
-        background-color: #0984e3;
-        color: #fff;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-size: 0.9em;
-        transition: background-color 0.3s ease;
-    }
-    .skill:hover {
-        background-color: #74b9ff;
-    }
-    .interests {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-    }
-    .interest-group {
-        flex-basis: calc(50% - 10px);
-        min-width: 250px;
-    }
-    .interest-group h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
-    a {
-        color: #0984e3;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-        body {
-            padding: 15px;
+        :root {
+            --primary-color: #1a237e; /* Dark blue */
+            --secondary-color: #3949ab; /* Lighter blue for hover effects */
+            --text-color: #000000; /* Black */
+            --background-color: #ffffff; /* White background */
+            --card-background: #ffffff;
         }
-        header {
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
             padding: 20px;
         }
-        h1 {
-            font-size: 2.2em;
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        main {
+            padding: 30px;
+        }
+
         .section {
-            padding: 15px;
+            margin-bottom: 30px;
         }
-        .interest-group {
-            flex-basis: 100%;
-        }
-    }
-    @media (max-width: 480px) {
-        h1 {
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             font-size: 1.8em;
         }
-        .contact-info {
-            font-size: 0.9em;
+
+        .job, .education-item {
+            margin-bottom: 25px;
         }
+
         .job-title, .edu-title {
-            font-size: 1em;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-bottom: 5px;
         }
-    }
+
+        .job-date, .edu-date {
+            font-style: italic;
+            color: #636e72;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .interest-group {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .interest-group h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            header {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .interest-group {
+                flex-basis: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .contact-info {
+                font-size: 0.9em;
+            }
+
+            .job-title, .edu-title {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Samuel Robson</h1>
-        <div class="contact-info">
-            <p>Email: samuelrobsonj@gmail.com | Phone: +1-929-549-0939</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/samuelrobson1" target="_blank">www.linkedin.com/in/samuelrobson1</a></p>
-            <p>Portfolio: <a href="https://samuelrobson.framer.website" target="_blank">samuelrobson.framer.website</a></p>
-            <p>Location: Brooklyn, New York</p>
-        </div>
-    </header>
-
-    <main>
-        <section class="section">
-            <h2>Professional Experience</h2>
-            <div class="job">
-                <p class="job-title">TikTok – Strategy Manager</p>
-                <p class="job-date">September 2022 - Present</p>
-                <p>Advised Small Business Ads leadership, revenue grew 3.0x to $XB.</p>
-                <ul>
-                    <li>Customer PMF Deep Dive: Led SMB customer industry analysis to evaluate product market fit and sales approach. Developed novel approach to analyze product usage across segments, identifying cross-sell opportunities. Research viewed 600+ times by 90+ stakeholders. Established as key contact for industry data, earning commendation from Americas Sales Lead.</li>
-                    <li>Customer Experience Analysis: Spearheaded global project analyzing 5,000+ merchant surveys to diagnose revenue growth challenges. Integrated survey responses, product usage data, and web-scraped information into customer insights database.</li>
-                    <li>Product Sizing: Led the $XB market sizing and expansion analysis for TikTok's small business advertising agency segment. Supported the prioritisation of API and Media Planning products for agencies, resulting in 2.5x revenue growth during product tests.</li>
-                    <li>KPI Development: Developed KPIs to measure the success of small business products and our sales approach. Led quarterly target setting, consistently forecasting within 5% of actuals.</li>
-                </ul>
+    <div class="container">
+        <header>
+            <h1>Samuel Robson</h1>
+            <div class="contact-info">
+                <p>Email: samuelrobsonj@gmail.com</p>
+                <p>Phone: +1-929-549-0939</p>
+                <p><a href="https://www.linkedin.com/in/samuelrobson1" target="_blank">LinkedIn</a></p>
+                <p><a href="https://samuelrobson.framer.website" target="_blank">Portfolio</a></p>
+                <p>Brooklyn, New York</p>
             </div>
-            <div class="job">
-                <p class="job-title">Accenture – Product Manager</p>
-                <p class="job-date">March 2020 – September 2022</p>
-                <p>Advanced to engagement lead in two years; helped tech companies build customer-centric products worked directly with the C-Suite.</p>
-                <ul>
-                    <li>Data Infrastructure Product: Led a cross-functional team of 8 engineers, designers and legal team members to create a data product which automatically identified and tagged sensitive small business data. Defined requirements and roadmap to reduce 100 weekly hours of manual requests. Worked directly with the CDO.</li>
-                    <li>Social Commerce Product: Conducted competitor analysis (8 platforms) and merchant survey (1,100+ respondents) using Python to enhance social commerce product. Developed roadmap featuring streamlined verification process and gamified profile setup. Presented findings to client senior leadership.</li>
-                    <li>Consent Product: Led competitor benchmarking, expert interviews, and UX assessment of client's consent approval flow. Designed more transparent process emphasizing customer value proposition. Projected ~$XXM revenue uplift through increased sign-ups.</li>
-                </ul>
-            </div>
-        </section>
+        </header>
 
-        <section class="section">
-            <h2>Education</h2>
-            <div class="education-item">
-                <p class="edu-title">University of Bath – Economics & Management BSc</p>
-                <p class="edu-date">September 2015 - July 2019</p>
-                <ul>
-                    <li>2:1 (3.8 GPA) Courses included: Product Management, New Ventures, Corporate Strategy and Data Science.</li>
-                </ul>
-            </div>
-            <div class="education-item">
-                <p class="edu-title">University of Illinois Urbana Champaign - Exchange</p>
-                <p class="edu-date">December 2018 – July 2018</p>
-                <ul>
-                    <li>3.8 GPA in Computing. Courses included: Intro to Artificial Intelligence, Software and Systems, Web Development (HTML, CSS, Node.js etc.), and Human Computer Interaction.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill">Excel</span>
-                <span class="skill">Python</span>
-                <span class="skill">CSS</span>
-                <span class="skill">SQL</span>
-                <span class="skill">Figma</span>
-                <span class="skill">PPT/Slides</span>
-                <span class="skill">Canva</span>
-                <span class="skill">Adobe Suite</span>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Side Projects</h2>
-            <ul>
-                <li><strong>Please see my portfolio above.</strong> </li>
-                <li><strong>Ad Script Generator:</strong> Created an AI Web App using GPT-3.5 API, to help small businesses generate advertising scripts.</li>
-                <li><strong>Mindful Illustrations:</strong> Designed illustrations to support mindfulness practices.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Full stack Web Development (Udemy)</li>
-                <li>Building an AI SaaS App (Udemy)</li>
-                <li>Data Science (Northwestern)</li>
-                <li>Art & Design (MCA Chicago)</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Interests</h2>
-            <div class="interests">
-                <div class="interest-group">
-                    <h3>Books</h3>
+        <main>
+            <section class="section">
+                <h2>Professional Experience</h2>
+                <div class="job">
+                    <p class="job-title">TikTok – Strategy Manager</p>
+                    <p class="job-date">September 2022 - Present</p>
+                    <p>Advised Small Business Ads leadership, revenue grew 3.0x to $XB.</p>
                     <ul>
-                        <li>AI: AI 2041, Life 3.0, Human + Machine, The Creativity Code, Rebooting AI</li>
-                        <li>Physics: Helgoland, Reality is Not What it Seems, The Order of Time</li>
+                        <li>Customer PMF Deep Dive: Led SMB customer industry analysis to evaluate product market fit and sales approach. Developed novel approach to analyze product usage across segments, identifying cross-sell opportunities. Research viewed 600+ times by 90+ stakeholders. Established as key contact for industry data, earning commendation from Americas Sales Lead.</li>
+                        <li>Customer Experience Analysis: Spearheaded global project analyzing 5,000+ merchant surveys to diagnose revenue growth challenges. Integrated survey responses, product usage data, and web-scraped information into customer insights database.</li>
+                        <li>Product Sizing: Led the $XB market sizing and expansion analysis for TikTok's small business advertising agency segment. Supported the prioritisation of API and Media Planning products for agencies, resulting in 2.5x revenue growth during product tests.</li>
+                        <li>KPI Development: Developed KPIs to measure the success of small business products and our sales approach. Led quarterly target setting, consistently forecasting within 5% of actuals.</li>
                     </ul>
                 </div>
-                <div class="interest-group">
-                    <h3>Sports</h3>
+                <div class="job">
+                    <p class="job-title">Accenture – Product Manager</p>
+                    <p class="job-date">March 2020 – September 2022</p>
+                    <p>Advanced to engagement lead in two years; helped tech companies build customer-centric products worked directly with the C-Suite.</p>
                     <ul>
-                        <li>Captained University, district and club soccer teams</li>
-                        <li>Surfing</li>
-                        <li>Tennis</li>
-                        <li>Scuba diving</li>
+                        <li>Data Infrastructure Product: Led a cross-functional team of 8 engineers, designers and legal team members to create a data product which automatically identified and tagged sensitive small business data. Defined requirements and roadmap to reduce 100 weekly hours of manual requests. Worked directly with the CDO.</li>
+                        <li>Social Commerce Product: Conducted competitor analysis (8 platforms) and merchant survey (1,100+ respondents) using Python to enhance social commerce product. Developed roadmap featuring streamlined verification process and gamified profile setup. Presented findings to client senior leadership.</li>
+                        <li>Consent Product: Led competitor benchmarking, expert interviews, and UX assessment of client's consent approval flow. Designed more transparent process emphasizing customer value proposition. Projected ~$XXM revenue uplift through increased sign-ups.</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <p class="edu-title">University of Bath – Economics & Management BSc</p>
+                    <p class="edu-date">September 2015 - July 2019</p>
+                    <ul>
+                        <li>2:1 (3.8 GPA) Courses included: Product Management, New Ventures, Corporate Strategy and Data Science.</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <p class="edu-title">University of Illinois Urbana Champaign - Exchange</p>
+                    <p class="edu-date">December 2018 – July 2018</p>
+                    <ul>
+                        <li>3.8 GPA in Computing. Courses included: Intro to Artificial Intelligence, Software and Systems, Web Development (HTML, CSS, Node.js etc.), and Human Computer Interaction.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span class="skill">Excel</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">SQL</span>
+                    <span class="skill">Figma</span>
+                    <span class="skill">PPT/Slides</span>
+                    <span class="skill">Canva</span>
+                    <span class="skill">Adobe Suite</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Side Projects</h2>
+                <ul>
+                    <li><strong>Please see my portfolio above.</strong></li>
+                    <li><strong>Ad Script Generator:</strong> Created an AI Web App using GPT-3.5 API, to help small businesses generate advertising scripts.</li>
+                    <li><strong>Mindful Illustrations:</strong> Designed illustrations to support mindfulness practices.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Full stack Web Development (Udemy)</li>
+                    <li>Building an AI SaaS App (Udemy)</li>
+                    <li>Data Science (Northwestern)</li>
+                    <li>Art & Design (MCA Chicago)</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Interests</h2>
+                <div class="interests">
+                    <div class="interest-group">
+                        <h3>Books</h3>
+                        <ul>
+                            <li>AI: AI 2041, Life 3.0, Human + Machine, The Creativity Code, Rebooting AI</li>
+                            <li>Physics: Helgoland, Reality is Not What it Seems, The Order of Time</li>
+                        </ul>
+                    </div>
+                    <div class="interest-group">
+                        <h3>Sports</h3>
+                        <ul>
+                            <li>Captained University, district and club soccer teams</li>
+                            <li>Surfing</li>
+                            <li>Tennis</li>
+                            <li>Scuba diving</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
